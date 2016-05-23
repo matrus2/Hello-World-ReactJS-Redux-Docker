@@ -1,0 +1,55 @@
+@import "~susy/sass/susy";
+
+/* Variables */
+$color1: #FFFFFF;
+$color2: #FF4CA5;
+$color3: #ff007f;
+$color4: #7F2653;
+$color5: #CC0066;
+$color6: #031f38;
+
+$susy: (
+        columns: 12,
+        container: 1200px,
+        gutters: 1/4,
+        global-box-sizing: border-box,
+        debug: (image: hide)
+);
+
+@include border-box-sizing;
+
+* {
+  font-family: "Helvetica", sans-serif;
+}
+
+main {
+  @include container;
+  background-color: $color1;
+}
+
+header, article, aside {
+  margin-bottom: gutter();
+}
+
+header {
+  padding: 2em;
+  background-color: $color2;
+}
+
+article {
+  @include span(8);
+  padding: 2em;
+  background-color: $color3;
+}
+
+aside {
+  @include span(4 last);
+  padding: 2em;
+  background-color: $color5;
+}
+
+footer {
+  clear: both;
+  padding: 2em;
+  background-color: $color4;
+}

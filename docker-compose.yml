@@ -1,0 +1,6 @@
+node:
+  build: .
+  volumes:
+    - ./app:/var/www/blog/app
+  ports:
+    - "3000:3000"
